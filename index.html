@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Les Règles de Déco – Le Guide par Inès Richarté</title>
+<title>Les Règles de Déco – Le Guide</title>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -13,8 +13,7 @@
     --mid: #4A4A46;
     --light: #8A8A84;
     --accent: #C4704A;
-    --accent-light: #E8C4B0;
-    --blue-clair: #8bafd7;
+    --blue: #8bafd7;
     --section-bg: #F2EDE6;
     --border: #E0D9CF;
     --strike: #AAAAAA;
@@ -29,35 +28,20 @@
     line-height: 1.6;
   }
 
+  /* NAV */
   nav {
-    padding: 20px 40px;
+    padding: 18px 40px;
     text-align: center;
     border-bottom: 1px solid var(--border);
     background: var(--white);
   }
-  nav .logo {
-    font-family: 'EB Garamond', serif;
-    font-size: 18px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--charcoal);
-  }
-  nav .logo span {
-    display: block;
-    font-size: 11px;
-    letter-spacing: 4px;
-    color: var(--light);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-  }
+  nav img { height: 80px; width: auto; }
 
-  .hero {
-    background: var(--white);
-    padding: 80px 40px 60px;
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto;
-  }
+  /* STRIPS */
+  .blue-strip { height: 3px; background: var(--blue); opacity: 0.5; }
+  .accent-strip { height: 3px; background: var(--accent); }
+
+  /* EYEBROW */
   .eyebrow {
     font-size: 11px;
     letter-spacing: 3px;
@@ -66,80 +50,52 @@
     font-weight: 500;
     margin-bottom: 20px;
   }
-  .hero h1 {
-    font-family: 'EB Garamond', serif;
-    font-size: clamp(38px, 6vw, 58px);
-    font-weight: 500;
-    line-height: 1.15;
-    color: var(--charcoal);
-    margin-bottom: 24px;
-  }
-  .hero h1 em { font-style: italic; color: var(--accent); }
-  .hero .subtitle {
-    font-size: 17px;
-    color: var(--mid);
-    max-width: 520px;
-    margin: 0 auto 36px;
-    font-weight: 300;
-    line-height: 1.7;
-  }
 
-  .mock-wrap {
-    background: var(--section-bg);
-    padding: 60px 40px;
-    text-align: center;
-  }
-  .mock-img {
-    width: 200px;
-    border-radius: 4px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    margin: 0 auto 32px;
-    display: block;
-  }
-
+  /* BTN */
   .btn {
     display: inline-block;
     background: var(--accent);
     color: white;
     padding: 16px 40px;
-    border-radius: 2px;
-    font-size: 15px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-decoration: none;
-    cursor: pointer;
-    border: none;
+    border-radius: 2px;
     transition: background 0.2s;
+    border: none;
+    cursor: pointer;
   }
   .btn:hover { background: #B05E3A; }
-  .price-line {
-    font-size: 13px;
-    color: var(--light);
-    margin-top: 10px;
-  }
-  .price-line strong { color: var(--charcoal); font-size: 16px; }
-  .price-line s { color: var(--strike); }
+  .btn-full { display: block; width: 100%; text-align: center; padding: 18px; }
+  .price-note { font-size: 13px; color: var(--light); margin-top: 10px; text-align: center; }
+  .price-note s { color: var(--strike); }
+  .price-note strong { color: var(--charcoal); font-size: 16px; }
 
-  section {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 70px 40px;
+  /* SECTIONS */
+  .section { max-width: 720px; margin: 0 auto; padding: 72px 40px; }
+  .section-white { background: var(--white); padding: 72px 40px; }
+  .section-white .inner { max-width: 720px; margin: 0 auto; }
+  .section-bg { background: var(--section-bg); padding: 72px 40px; }
+  .section-bg .inner { max-width: 720px; margin: 0 auto; }
+
+  /* TYPO */
+  h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(36px, 5.5vw, 58px);
+    font-weight: 500;
+    line-height: 1.12;
+    color: var(--charcoal);
+    margin-bottom: 24px;
   }
-  section.full {
-    max-width: 100%;
-    background: var(--section-bg);
-    padding: 70px 40px;
-  }
-  section.full .inner {
-    max-width: 720px;
-    margin: 0 auto;
-  }
+  h1 em { font-style: italic; color: var(--accent); }
 
   h2 {
     font-family: 'EB Garamond', serif;
-    font-size: clamp(26px, 4vw, 36px);
+    font-size: clamp(26px, 4vw, 38px);
     font-weight: 500;
-    line-height: 1.25;
+    line-height: 1.2;
     margin-bottom: 24px;
     color: var(--charcoal);
   }
@@ -150,64 +106,71 @@
     color: var(--mid);
     margin-bottom: 18px;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.85;
   }
   p strong { color: var(--charcoal); font-weight: 500; }
+  p:last-child { margin-bottom: 0; }
 
-  .check-list {
-    list-style: none;
-    margin: 28px 0;
+  /* HERO */
+  .hero {
+    background: var(--white);
+    padding: 72px 40px 60px;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
   }
+  .hero .subtitle {
+    font-size: 17px;
+    color: var(--mid);
+    max-width: 500px;
+    margin: 0 auto 36px;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  /* HERO MOCKUP */
+  .hero-mockup {
+    background: var(--section-bg);
+    padding: 60px 40px;
+    text-align: center;
+  }
+  .hero-mockup img {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto 32px;
+    display: block;
+  }
+  .hero-mockup h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--light);
+    margin-bottom: 6px;
+  }
+  .hero-mockup h2 {
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+  .hero-mockup p { font-size: 14px; margin-bottom: 28px; }
+
+  /* CHECK LIST */
+  .check-list { list-style: none; margin: 28px 0; border-top: 1px solid var(--border); }
   .check-list li {
-    padding: 14px 0 14px 36px;
+    padding: 16px 0 16px 36px;
     border-bottom: 1px solid var(--border);
-    font-size: 16px;
+    font-size: 15px;
     color: var(--mid);
     position: relative;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.65;
   }
-  .check-list li:first-child { border-top: 1px solid var(--border); }
-  .check-list li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-size: 16px;
-  }
+  .check-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
 
-  .modules {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 32px;
-  }
-  @media (max-width: 600px) { .modules { grid-template-columns: 1fr; } }
-  .module {
-    background: var(--white);
-    border: 1px solid var(--border);
-    padding: 24px;
-    border-radius: 2px;
-  }
-  .module .tag {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-  .module h3 {
-    font-family: 'EB Garamond', serif;
-    font-size: 19px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    color: var(--charcoal);
-  }
-  .module p { font-size: 14px; margin: 0; line-height: 1.6; }
-
+  /* PULL QUOTE */
   .pull-quote {
-    border-left: 3px solid var(--blue-clair);
+    border-left: 3px solid var(--blue);
     padding: 20px 28px;
     margin: 36px 0;
     background: var(--white);
@@ -222,238 +185,208 @@
     font-weight: 400;
   }
 
-  .bio-wrap {
-    display: flex;
-    gap: 36px;
-    align-items: flex-start;
-  }
-  @media (max-width: 600px) { .bio-wrap { flex-direction: column; } }
-  .bio-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: var(--accent-light);
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'EB Garamond', serif;
-    font-size: 36px;
-    color: var(--accent);
-  }
+  /* MODULES */
+  .modules { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+  @media (max-width: 580px) { .modules { grid-template-columns: 1fr; } }
+  .module { background: var(--white); border: 1px solid var(--border); padding: 24px; }
+  .module .tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 10px; }
+  .module h3 { font-family: 'EB Garamond', serif; font-size: 19px; font-weight: 500; margin-bottom: 10px; color: var(--charcoal); }
+  .module p { font-size: 14px; margin: 0; line-height: 1.65; }
 
+  /* PRICE BOX */
   .price-box {
     background: var(--white);
     border: 1px solid var(--border);
-    padding: 48px 40px;
+    padding: 48px 44px;
     text-align: center;
-    border-radius: 2px;
-    max-width: 480px;
+    max-width: 460px;
     margin: 0 auto;
   }
-  .price-box h3 {
-    font-family: 'EB Garamond', serif;
-    font-size: 28px;
-    margin-bottom: 8px;
-    font-weight: 500;
-  }
-  .price-box .price-display { margin: 20px 0 8px; }
-  .price-box .old-price {
-    font-size: 16px;
-    color: var(--strike);
-    text-decoration: line-through;
-    margin-right: 8px;
-  }
-  .price-box .new-price {
-    font-size: 36px;
-    font-family: 'EB Garamond', serif;
-    font-weight: 600;
-    color: var(--charcoal);
-  }
-  .price-box .guarantee { font-size: 13px; color: var(--light); margin-top: 14px; }
+  .price-box .label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+  .price-box h3 { font-family: 'EB Garamond', serif; font-size: 26px; font-weight: 500; margin-bottom: 20px; color: var(--charcoal); }
+  .price-display { margin-bottom: 8px; }
+  .old-price { font-size: 16px; color: var(--strike); text-decoration: line-through; margin-right: 8px; }
+  .new-price { font-family: 'EB Garamond', serif; font-size: 48px; font-weight: 600; color: var(--charcoal); }
+  .price-period { font-size: 13px; color: var(--light); margin-bottom: 28px; }
 
-  .included { list-style: none; text-align: left; margin: 24px 0; }
-  .included li {
-    padding: 8px 0 8px 28px;
-    font-size: 15px;
-    color: var(--mid);
-    position: relative;
-    font-weight: 300;
-  }
-  .included li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--blue-clair);
-    font-weight: 500;
+  /* INCLUDED */
+  .included { list-style: none; text-align: left; margin: 0 0 28px; border-top: 1px solid var(--border); }
+  .included li { padding: 10px 0 10px 26px; font-size: 14px; color: var(--mid); position: relative; font-weight: 300; border-bottom: 1px solid var(--border); }
+  .included li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 600; }
+
+  /* BIO */
+  .bio-wrap { display: flex; gap: 36px; align-items: flex-start; }
+  @media (max-width: 580px) { .bio-wrap { flex-direction: column; } }
+  .bio-avatar {
+    width: 110px; height: 110px; border-radius: 50%;
+    background: var(--section-bg); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'EB Garamond', serif; font-size: 32px; color: var(--accent);
+    border: 1px solid var(--border);
   }
 
-  .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
   .faq-item:first-child { border-top: 1px solid var(--border); }
-  .faq-q { font-size: 16px; font-weight: 500; color: var(--charcoal); margin-bottom: 10px; }
-  .faq-a { font-size: 15px; color: var(--mid); font-weight: 300; margin: 0; line-height: 1.7; }
+  .faq-q { font-size: 15px; font-weight: 500; color: var(--charcoal); margin-bottom: 8px; }
+  .faq-a { font-size: 14px; color: var(--mid); font-weight: 300; margin: 0; line-height: 1.75; }
 
-  .blue-strip {
-    height: 3px;
-    background: var(--blue-clair);
-    opacity: 0.5;
-  }
-
-  footer {
-    text-align: center;
-    padding: 40px;
-    border-top: 1px solid var(--border);
-    font-size: 13px;
-    color: var(--light);
-    font-weight: 300;
-  }
+  /* FOOTER */
+  footer { text-align: center; padding: 36px 40px; border-top: 1px solid var(--border); font-size: 12px; color: var(--light); font-weight: 300; background: var(--white); }
+  footer a { color: var(--light); text-decoration: none; }
 
   @media (max-width: 480px) {
-    .hero { padding: 50px 24px 40px; }
-    section { padding: 52px 24px; }
-    section.full { padding: 52px 24px; }
-    .mock-wrap { padding: 48px 24px; }
+    nav { padding: 14px 20px; }
+    .hero { padding: 52px 24px 40px; }
+    .section { padding: 52px 24px; }
+    .section-white, .section-bg { padding: 52px 24px; }
+    .hero-mockup { padding: 48px 24px; }
     .price-box { padding: 36px 24px; }
   }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="logo">
-    Inès Richarté
-    <span>Designer d'intérieur</span>
-  </div>
-</nav>
+<!-- NAV -->
+<nav><img src="logo.png" alt="Inès Richarté" /></nav>
 
-<div style="background:var(--white);">
+<!-- HERO -->
+<div style="background: var(--white);">
   <div class="hero">
     <p class="eyebrow">Le guide</p>
-    <h1>Tu passes des heures sur Pinterest.<br>Ton salon ressemble toujours pas<br>à ce que tu as <em>en tête.</em></h1>
+    <h1>Tu passes des heures sur Pinterest.<br>Ton intérieur ressemble toujours pas<br>à ce que tu as <em>en tête.</em></h1>
     <p class="subtitle">Ce n'est pas un problème de goût. C'est un problème de base. Personne ne t'a jamais appris les règles.</p>
-  </div>
-
-  <div class="mock-wrap">
-    <img class="mock-img" src="https://placehold.co/200x280/C4704A/FAF7F2?text=LE+GUIDE" alt="Les Règles de Déco" />
-    <p style="font-size:14px; color:var(--light); margin-bottom:4px;">Les Règles de Déco</p>
-    <h2 style="text-align:center; font-size:28px; margin-bottom:4px;">Couleur et aménagement</h2>
-    <p style="text-align:center; font-size:15px;">Par Inès Richarté</p>
-    <div style="margin-top:28px;">
-      <a href="https://inesricharte.systeme.io/6aa11365" class="btn">Je veux le guide</a>
-      <p class="price-line"><s>54€</s> &nbsp; <strong>27€</strong> jusqu'au lancement</p>
-    </div>
+    <a href="https://inesricharte.systeme.io/6aa11365" class="btn">Je veux le guide →</a>
+    <p class="price-note"><s>54€</s> &nbsp; <strong>27€</strong> prix de lancement</p>
   </div>
 </div>
 
 <div class="blue-strip"></div>
 
-<section>
-  <h2>C'est toi si...</h2>
-  <ul class="check-list">
-    <li>Tu as des tonnes d'inspos Pinterest mais une fois devant ton salon, tu sais pas par où commencer</li>
-    <li>Tu as acheté des trucs qui te plaisaient, mais une fois rentrés chez toi ça ne marche pas ensemble</li>
-    <li>Tu as essayé des choses, changé des meubles, des coussins, de la peinture, et le résultat est quand même pas ce que tu voulais</li>
-    <li>Chaque fois que tu vois un bel intérieur sur Instagram tu te demandes "mais comment ils font pour que tout soit aussi cohérent ?"</li>
-    <li>Tu as peur de te tromper, de dépenser de l'argent pour rien, de finir avec une déco que tu vas te lasser dans 2 ans</li>
-  </ul>
-</section>
+<!-- MOCKUP + PREMIER CTA -->
+<div class="hero-mockup">
+  <img src="guide-mockup.png" alt="Les Règles de Déco" />
+  <h3>Le guide</h3>
+  <h2>Les Règles de Déco</h2>
+  <p style="color: var(--light); font-size:14px;">Couleur et aménagement · Par Inès Richarté · 48 pages</p>
+  <a href="https://inesricharte.systeme.io/6aa11365" class="btn">J'achète le guide – 27€</a>
+  <p class="price-note"><s>54€</s> &nbsp; <strong>27€</strong> prix de lancement</p>
+</div>
 
-<section class="full">
+<!-- C'EST TOI SI -->
+<div class="section-white">
   <div class="inner">
-    <h2>Le problème c'est pas<br>que tu manques de goût.</h2>
-    <p>Tu passes du temps sur les réseaux, tu as des idées, tu sais ce que tu aimes. Mais avoir du goût et savoir l'appliquer, c'est deux choses différentes.</p>
-    <p>Les intérieurs qui fonctionnent, ceux qui ont l'air <em>finis</em>, cohérents, beaux, ils ne doivent rien au hasard. Derrière chaque bel intérieur, il y a des règles. Des règles de couleur, de proportion, d'équilibre, de composition.</p>
-    <p><strong>Des règles que personne ne t'a jamais apprises.</strong></p>
-
-    <div class="pull-quote">
-      <p>Suivre les tendances c'est être condamnée à se lasser de sa déco tous les deux ans. Ce que tu veux, c'est une déco qui dure, qui te ressemble vraiment, et qui sera toujours belle dans dix ans.</p>
-    </div>
-
-    <p>C'est exactement ce que ce guide t'apprend. Pas des tendances. Pas "cette couleur est à la mode cette saison." Des règles universelles, celles que les pros utilisent depuis toujours, peu importe le style, peu importe le budget.</p>
-    <p>Une fois que tu les connais, tu peux les appliquer chez toi maintenant, et les réutiliser pour toujours.</p>
+    <h2>C'est toi si...</h2>
+    <ul class="check-list">
+      <li>Tu passes des heures sur Pinterest mais une fois devant ton salon, tu sais pas par où commencer</li>
+      <li>Tu achètes des choses qui te plaisent, mais une fois rentrées chez toi elles ne marchent pas ensemble</li>
+      <li>Tu as essayé des choses, changé des meubles, des coussins, de la peinture, et le résultat est quand même pas ce que tu voulais</li>
+      <li>Tu regardes un bel intérieur sur Instagram et tu te demandes "mais comment ils font pour que tout soit aussi cohérent ?"</li>
+      <li>Tu as peur de te tromper, de dépenser de l'argent pour rien, de te lasser de ta déco dans deux ans</li>
+    </ul>
   </div>
-</section>
+</div>
 
-<section>
-  <h2>Ce que tu vas apprendre<br>dans le guide</h2>
-  <p>48 pages divisées en deux grandes sections complémentaires. Tu peux les lire dans l'ordre ou aller directement à ce dont tu as besoin.</p>
+<!-- LE VRAI PROBLÈME -->
+<div class="section">
+  <h2>Le problème c'est pas<br>que tu manques de goût.</h2>
+  <p>Tu passes du temps sur les réseaux, tu as des idées, tu sais ce que tu aimes. Mais avoir du goût et savoir l'appliquer dans un espace, c'est deux choses différentes.</p>
+  <p>Les intérieurs qui fonctionnent, ceux qui ont l'air <strong>finis</strong>, cohérents, beaux — ils ne doivent rien au hasard. Derrière chaque bel intérieur, il y a des règles. Des règles de couleur, de proportion, d'équilibre, de composition.</p>
+  <p><strong>Des règles que personne ne t'a jamais apprises.</strong></p>
 
-  <div class="modules">
-    <div class="module">
-      <p class="tag">Section I</p>
-      <h3>Les couleurs</h3>
-      <p>Comprendre le cercle chromatique, construire une palette cohérente, utiliser la peinture, et gérer les motifs. Fini les achats impulsifs qui ne s'assemblent pas.</p>
-    </div>
-    <div class="module">
-      <p class="tag">Section I</p>
-      <h3>Utiliser les couleurs</h3>
-      <p>Comment les combiner dans une pièce, les proportions, les erreurs classiques à éviter, et les règles qui fonctionnent à tous les coups.</p>
-    </div>
-    <div class="module">
-      <p class="tag">Section II</p>
-      <h3>Composition et circulation</h3>
-      <p>Les proportions, la circulation dans une pièce, comment placer tes meubles pour que tout soit fluide et logique.</p>
-    </div>
-    <div class="module">
-      <p class="tag">Section II</p>
-      <h3>Rideaux et équilibre visuel</h3>
-      <p>Les rideaux, les contrastes, le poids visuel, le point focal. Tout ce qui fait qu'un intérieur semble vraiment fini.</p>
-    </div>
+  <div class="pull-quote">
+    <p>Suivre les tendances c'est être condamnée à se lasser de sa déco tous les deux ans. Ce que tu veux, c'est une déco qui dure et qui te ressemble vraiment.</p>
   </div>
 
-  <p style="margin-top:28px; font-size:15px;">Tu vas apprendre à créer du contraste, gérer le poids visuel, trouver un point focal, varier les hauteurs, utiliser le vide. Toutes les choses que tu sens instinctivement dans un bel intérieur, mais que tu ne savais pas nommer ni reproduire.</p>
-</section>
+  <p>C'est exactement ce que ce guide t'apprend. Pas des tendances. Pas "cette couleur est à la mode cette saison." Des règles universelles, celles que les pros utilisent depuis toujours, peu importe le style, peu importe le budget.</p>
+  <p>Une fois que tu les connais, tu peux les appliquer chez toi maintenant, et les réutiliser pour toujours.</p>
+</div>
 
-<div class="blue-strip"></div>
-
-<section class="full">
+<!-- CE QUE TU APPRENDS -->
+<div class="section-bg">
   <div class="inner">
-    <h2>Ce guide n'est pas<br><em>un autre contenu de déco</em>.</h2>
-    <p>La déco sur les réseaux c'est soit des intérieurs inaccessibles hors budget, soit des conseils de tendances qui seront dépassés dans six mois.</p>
-    <p>Ce guide c'est le contraire. Les règles dedans s'appliquent peu importe ton style, ton budget, si ton appart fait 30m² ou 150m². Elles sont valables maintenant, et dans dix ans.</p>
-    <p><strong>L'idée c'est de te donner les outils pour que tu n'aies plus jamais besoin de te demander "est-ce que ça marche ensemble ?"</strong></p>
-    <div style="text-align:center; margin-top:36px;">
-      <a href="https://inesricharte.systeme.io/6aa11365" class="btn">Je veux ces règles</a>
-      <p class="price-line"><s>54€</s> &nbsp; <strong>27€</strong> prix de lancement</p>
+    <h2>Ce que tu vas apprendre</h2>
+    <p>48 pages divisées en deux grandes sections. Tu peux les lire dans l'ordre ou aller directement à ce dont tu as besoin.</p>
+    <div class="modules">
+      <div class="module">
+        <p class="tag">Section I · Couleurs</p>
+        <h3>Comprendre les couleurs</h3>
+        <p>Le cercle chromatique, construire une palette cohérente, les combinaisons qui fonctionnent à tous les coups.</p>
+      </div>
+      <div class="module">
+        <p class="tag">Section I · Couleurs</p>
+        <h3>Peinture et motifs</h3>
+        <p>Comment choisir une couleur de peinture, gérer les motifs sans surcharger, les règles qui font qu'une pièce respire.</p>
+      </div>
+      <div class="module">
+        <p class="tag">Section II · Aménagement</p>
+        <h3>Circulation et proportions</h3>
+        <p>Placer tes meubles, gérer les circulations. Les règles que les pros appliquent à chaque projet.</p>
+      </div>
+      <div class="module">
+        <p class="tag">Section II · Aménagement</p>
+        <h3>Rideaux et équilibre visuel</h3>
+        <p>Les rideaux, les contrastes, le poids visuel, le point focal. Tout ce qui fait qu'un intérieur semble vraiment fini.</p>
+      </div>
+    </div>
+
+    <!-- DEUXIÈME CTA -->
+    <div style="text-align:center; margin-top: 48px;">
+      <a href="https://inesricharte.systeme.io/6aa11365" class="btn">Je veux ces règles – 27€</a>
+      <p class="price-note"><s>54€</s> &nbsp; <strong>27€</strong> prix de lancement</p>
     </div>
   </div>
-</section>
+</div>
 
-<section>
-  <h2>Qui je suis</h2>
-  <div class="bio-wrap">
-    <div class="bio-avatar">I</div>
-    <div>
-      <p><strong>Je suis Inès Richarté.</strong> Française installée à Montréal, designer cuisiniste de formation, créatrice de contenu décoration.</p>
-      <p>Je passe mes journées à concevoir des espaces, à comprendre pourquoi certains intérieurs fonctionnent et d'autres pas, et à transmettre ça de la façon la plus simple et la plus concrète possible.</p>
-      <p>Ce guide, c'est les règles que j'enseigne à mes clients, rassemblées au même endroit, pour que tu puisses les appliquer toi-même. Pas pour que tu deviennes décoratrice. Pour que tu comprennes ton espace et que tu aies confiance dans tes choix.</p>
+<!-- PAS UN CONTENU DE TENDANCES -->
+<div class="section">
+  <h2>Ce guide c'est pas<br><em>un autre contenu de déco.</em></h2>
+  <p>La déco sur les réseaux c'est soit des intérieurs hors budget, soit des conseils de tendances qui seront dépassés dans six mois.</p>
+  <p>Les règles dans ce guide s'appliquent peu importe ton style, ton budget, si ton appart fait 30m² ou 150m². Elles sont valables maintenant, et dans dix ans.</p>
+  <p><strong>L'idée c'est de te donner les outils pour que tu n'aies plus jamais besoin de te demander "est-ce que ça marche ensemble ?"</strong></p>
+</div>
+
+<!-- BIO -->
+<div class="section-white">
+  <div class="inner">
+    <h2>Qui je suis</h2>
+    <div class="bio-wrap">
+      <div class="bio-avatar">IR</div>
+      <div>
+        <p><strong>Je suis Inès Richarté.</strong> Française installée à Montréal, designer cuisiniste de formation, créatrice de contenu décoration.</p>
+        <p>Je passe mes journées à concevoir des espaces, à comprendre pourquoi certains intérieurs fonctionnent et d'autres pas, et à transmettre ça de la façon la plus simple et la plus concrète possible.</p>
+        <p>Ce guide, c'est les règles que j'enseigne à mes clients, rassemblées au même endroit, pour que tu puisses les appliquer toi-même. Pas pour que tu deviennes décoratrice. Pour que tu comprennes ton espace et que tu aies confiance dans tes choix.</p>
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="full" id="acheter">
+<!-- PRIX -->
+<div class="section-bg" id="acheter">
   <div class="inner" style="text-align:center;">
     <div class="price-box">
-      <h3>Les Règles de Déco</h3>
-      <p style="font-size:14px; color:var(--light); margin:0;">Le guide complet – couleur et aménagement</p>
+      <p class="label">Le guide</p>
+      <h3>Les Règles de Déco<br><span style="font-size:16px; font-weight:300; color:var(--mid);">Couleur et aménagement</span></h3>
       <div class="price-display">
         <span class="old-price">54€</span>
         <span class="new-price">27€</span>
       </div>
+      <p class="price-period">prix de lancement · accès à vie</p>
       <ul class="included">
         <li>48 pages de règles concrètes et applicables</li>
         <li>Section complète sur les couleurs et la peinture</li>
         <li>Section complète sur la composition et l'aménagement</li>
         <li>Accès immédiat, à vie, depuis n'importe quel appareil</li>
-        <li>Règles universelles, valables peu importe ton style</li>
+        <li>Règles universelles, peu importe ton style et ton budget</li>
       </ul>
-      <a href="https://inesricharte.systeme.io/6aa11365" class="btn" style="width:100%; display:block; text-align:center;">J'achète le guide – 27€</a>
-      <p class="guarantee">Accès immédiat après paiement.</p>
+      <a href="https://inesricharte.systeme.io/6aa11365" class="btn btn-full">J'achète le guide – 27€</a>
+      <p style="font-size:12px; color:var(--light); margin-top:12px;">Accès immédiat après paiement.</p>
     </div>
   </div>
-</section>
+</div>
 
-<section>
+<!-- FAQ -->
+<div class="section">
   <h2>Questions fréquentes</h2>
   <div class="faq-item">
     <p class="faq-q">C'est pour quel style de déco ?</p>
@@ -471,17 +404,20 @@
     <p class="faq-q">Sous quel format je reçois le guide ?</p>
     <p class="faq-a">Tu reçois un accès en ligne immédiatement après ton achat. Tu peux le lire depuis ton téléphone, ta tablette ou ton ordinateur.</p>
   </div>
-</section>
+</div>
 
-<section style="text-align:center;">
-  <h2 style="max-width:500px; margin:0 auto 20px;">Ton intérieur mérite<br>d'être <em>vraiment</em> fini.</h2>
-  <p style="max-width:440px; margin:0 auto 28px;">Pas juste "acceptable". Fini, cohérent, beau. Le genre d'intérieur dans lequel tu te sens bien tous les jours.</p>
-  <a href="https://inesricharte.systeme.io/6aa11365" class="btn">Je commence maintenant – 27€</a>
-  <p class="price-line" style="margin-top:12px;"><s>54€</s> &nbsp; prix de lancement</p>
-</section>
+<!-- DERNIÈRE CTA -->
+<div class="section-bg">
+  <div class="inner" style="text-align:center;">
+    <h2 style="max-width:480px; margin:0 auto 20px;">Ton intérieur mérite<br>d'être <em>vraiment fini.</em></h2>
+    <p style="max-width:420px; margin:0 auto 32px;">Pas juste "acceptable". Fini, cohérent, beau. Le genre d'intérieur dans lequel tu te sens bien tous les jours.</p>
+    <a href="https://inesricharte.systeme.io/6aa11365" class="btn">Je commence maintenant – 27€</a>
+    <p class="price-note"><s>54€</s> &nbsp; <strong>27€</strong> prix de lancement</p>
+  </div>
+</div>
 
 <footer>
-  © Inès Richarté · contact.inesricharte@gmail.com · @inesricharte
+  © Inès Richarté &nbsp;·&nbsp; <a href="mailto:contact.inesricharte@gmail.com">contact.inesricharte@gmail.com</a> &nbsp;·&nbsp; @inesricharte
 </footer>
 
 </body>
